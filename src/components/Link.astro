@@ -1,0 +1,17 @@
+---
+interface Props {
+    to: string;
+    txt: string;
+}
+const {to, txt} = Astro.props;
+---
+
+<a class="link-text" href={to}>
+    {txt}
+</a>
+
+<style>
+    .link-text {
+        font-family: 'Montserrat';
+    }
+</style>
