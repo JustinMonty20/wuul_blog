@@ -1,17 +1,24 @@
-<section>
+
     <!-- text introducting myself -->
-    <div class="bg-wuul-green flex justify-between content-stretch h-96">
-        <section>
-            <div>
-                <p>
-                    Hi, I'm Justin <br>
-                    <span>(aka wuul)</span>
-                </p>
+    <section class="wuul-gradiant grid grid-cols-3 justify-items-center items-center h-96">
+        <section class="col-span-2 text-center">
+            <div class="text-center">
+                <p class="text-4xl mb-1 font-main text-wuul-bg">Justin Montgomery</p>
+                <p class="text-2xl mb-1 text-wuul-bg font-main">Software Engineer</p>
+                <span class="subscript text-wuul-bg font-main text-lg italic">(wuul)</span>
             </div>
         </section>
-        <section>
-            <img class="rounded-full h-3/4 " src="../../public/wuul0.png" alt="White fluffy sheep holding a Raspberry Pi with a wise look on its face."/>
-        </section>
-    </div>
-    <!-- my brand image -->
+        <!-- my brand image -->
+    <section class="col-span-1 text-center">
+        <img class="rounded-full w-wuul-1/2 self-center" src="../../public/wuul0.png" alt="White fluffy sheep holding a Raspberry Pi with a wise look on its face."/>
+    </section>
 </section>
+
+<style>
+    .subscript{
+        vertical-align: sub;
+    }
+    .wuul-gradiant {
+        background: linear-gradient(to bottom, #74B881, #465B3D );
+    }
+</style>
