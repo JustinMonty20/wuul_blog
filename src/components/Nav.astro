@@ -1,7 +1,7 @@
 ---
 import Link from "./Link.astro";
-const pages = [{to: "blogs", txt: "blogs"}, {to: "showcase", txt: "showcase"}, {to: "vouches", txt: "vouches"}, {to: "", "txt": "me"}];
+const pages = [{to: "blogs", txt: "Blogs"}, {to: "showcase", txt: "Showcase"}, {to: "vouches", txt: "Vouches"}, {to: "", "txt": "Me"}];
 ---
-<div class="flex justify-around h-[3vh] text-wuul-txt ">
+<div class="flex justify-around h-[5vh] items-center text-wuul-main">
     {pages.map((page) => <Link to={page.to} txt={page.txt}/>)}
 </div>

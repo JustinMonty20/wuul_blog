@@ -6,12 +6,16 @@ interface Props {
 const {to, txt} = Astro.props;
 ---
 
-<a class="link-text" href={to}>
+<a class="link-text text-wuul-accent font-medium hover-underline" href={to}>
     {txt}
 </a>
 
 <style>
     .link-text {
         font-family: 'Montserrat';
+    }
+    :hover.hover-underline {
+        text-decoration: none;
+        color: #8D6DAC;
     }
 </style>
