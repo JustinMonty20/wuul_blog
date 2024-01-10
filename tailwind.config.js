@@ -2,7 +2,6 @@
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
-    plugins: [],
     extend: {
       textColor: {
         "wuul-main": "#333333",
@@ -22,6 +21,8 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-animated")
+  ],
 }
 
