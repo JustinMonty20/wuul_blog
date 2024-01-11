@@ -1,9 +1,14 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import PageTitleBlock from "../components/PageTitleBlock.astro"
+import BlogLayout from "../layouts/Blog.astro"
 ---
 
-<Layout>
-    <h1>
-        Blogs
-    </h1>
-</Layout>
+<BlogLayout>
+    <!-- this will have all the blogs with their top level series -->
+    <!-- ability to search for a single one blog post by title. -->
+    <!-- I'm always going to be the author -->
+    <PageTitleBlock numberGridCols=3>
+            <p class="text-base lg:text-4xl sm:text-xl mb-1 font-main text-wuul-bg sm:text-md">Development Journal</p>
+            <img class="rounded-full w-wuul-1/2 self-center" src="../../public/wuul0.png" alt="" slot="title-image">
+    </PageTitleBlock>
+</BlogLayout>
