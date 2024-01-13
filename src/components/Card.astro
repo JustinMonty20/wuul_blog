@@ -1,23 +1,32 @@
 ---
 interface Props {
 	title: string;
-	body: string;
-	href: string;
+	date?: string;
+	category?: string;
+	tags?: string[];
+	isDraft?: boolean;
+	tldr: string;
+	seoKeywords?: string[];
+	slug:string
+	img?: {href: string, alt:string};
 }
-const { href, title, body } = Astro.props;
+const { 
+	title, date, category, 
+	tags, isDraft, tldr, 
+	seoKeywords, slug, img } = Astro.props;
 ---
 <!--  maybe I can repurpose this card? -->
-<li class="link-card">
-	<a href={href}>
+<div class="link-card w-30">
+	<a href={`/blogs/${slug}`}>
 		<h2>
 			{title}
 			<span>&rarr;</span>
 		</h2>
 		<p>
-			{body}
+			{tldr}
 		</p>
 	</a>
-</li>
+</div>
 <style>
 	.link-card {
 		list-style: none;
@@ -32,7 +41,6 @@ const { href, title, body } = Astro.props;
 		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 	}
 	.link-card > a {
-		width: 100%;
 		text-decoration: none;
 		line-height: 1.4;
 		padding: calc(1.5rem - 1px);
