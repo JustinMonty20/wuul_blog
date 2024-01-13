@@ -4,11 +4,11 @@ date: 1/13/24
 category: Rollout 2
 tags: 
   - Testing2
-isDraft: true
-tldr: just some test 2
-seoKeywords: 
+isDraft: false
+tldr: messing around with the tldr. Just tring to see how long I can write this to get the content to explode or what it looks like really akljasdlkfj
+seoKeywords:
  - two
-slug: /test-2
+slug: test-2
 ---
 
 ## Lots of Great Content 2

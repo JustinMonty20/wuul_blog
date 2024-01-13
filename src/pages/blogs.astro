@@ -5,6 +5,7 @@ import PageTitleBlock from "../components/PageTitleBlock.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Card from "../components/Card.astro";
 import SlideMenu from "../components/SideMenu.astro";
+import { bundlerModuleNameResolver } from "typescript";
 
 const allPublishedBlogs = await getCollection("blogs", ({data}) => {
     return data.isDraft !== true
@@ -29,7 +30,7 @@ for(const apb of allPublishedBlogs) {
     <section class="grid grid-cols-6 mt-2">
         <!-- have the blog posts in chronological order -->
         <!-- restrict the size of the card. I want to get multiple cards in the same row -->
-        <section class="col-span-6 sm:col-span-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+        <section class="col-span-5 grid grid-cols-1 gap-2">
             <!-- think ultimately we need another container item that is here and then we build the card things inside of that. -->
             {
                 allPublishedBlogs.map((blogs) => ( 
@@ -38,7 +39,6 @@ for(const apb of allPublishedBlogs) {
                         <Card 
                           title={blogs.data.title}
                           slug={blogs.slug}
-                          tldr={blogs.data.tldr}
                         />
                     </div>
                 ))
