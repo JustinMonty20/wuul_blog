@@ -1,13 +1,12 @@
 ---
 import PageTitleBlock from "../components/PageTitleBlock.astro";
 import BrandImg from "../components/BrandImg.astro";
-// want to update the BlogLayout needs to be named something else
-import BlogLayout from "../layouts/Blog.astro"
+import BaseLayout from "../layouts/BaseLayout.astro"
 ---
-
-<BlogLayout>
-    <PageTitleBlock numberGridCols=3>
+<BaseLayout>
+    <PageTitleBlock>
             <p class="text-base lg:text-4xl sm:text-xl mb-1 font-main text-wuul-bg sm:text-md">Development Journal</p>
             <BrandImg slot="title-image" src="/wuul0.png", alt="White fluffy sheep holding a Raspberry Pi with a wise look on its face."/>
     </PageTitleBlock>
-</BlogLayout>
+    <!--  Blogs component that does all the collection fetching -->
+</BaseLayout>
