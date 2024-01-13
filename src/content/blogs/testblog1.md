@@ -6,7 +6,7 @@ tags:
   - Testing1
 isDraft: false
 tldr: just some test 1
-seoKeywords: 
+seoKeywords:
  - one
 slug: /test-one
 ----
