@@ -1,0 +1,30 @@
+---
+interface Props {
+	title: string;
+	date?: string;
+	description?: string
+	tags?: string[];
+	isDraft?: boolean;
+	tldr?: string;
+	seoKeywords?: string[];
+	slug:string
+	img?: {href: string, alt:string};
+}
+const { 
+	title, date, tags, 
+	isDraft, tldr, seoKeywords, 
+	slug, img 
+} = Astro.props;
+---
+<!--  maybe I can repurpose this card? -->
+<div class="container mx-auto border-solid border-2 border-black h-96">
+	<a href={`/blogs/${slug}`}>
+		<div class="flex flex-col items-center">
+			<slot name=""/>
+			<h2>
+				{title}
+				<span>&rarr;</span>
+			</h2>
+		</div>
+	</a>
+</div>
