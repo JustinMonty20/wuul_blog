@@ -1,0 +1,33 @@
+---
+const { frontmatter } = Astro.props
+import PageTitleBlock from "../components/PageTitleBlock.astro"
+import BrandImg from "../components/branding/BrandImg.astro"
+import Nav from "../components/Nav.astro";
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>wuul.dev</title>
+	</head>
+	<body>
+        <PageTitleBlock>
+            <p class="text-base lg:text-4xl sm:text-xl mb-1 font-main text-wuul-bg sm:text-md">{frontmatter.title}</p>
+            <BrandImg slot="title-image" src="/wuul0.png", alt="White fluffy sheep holding a Raspberry Pi with a wise look on its face."/>
+        </PageTitleBlock>
+        <!-- whatever the tld is -->
+        <p>{frontmatter.tldr}</p>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	html {
+		background: #FFFEF2;
+		margin: 0;
+		padding: 0;
+	}
+</style>
