@@ -4,6 +4,7 @@ import BrandImg from "../components/branding/BrandImg.astro";
 import PageTitleBlock from "../components/PageTitleBlock.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Card from "../components/Card.astro";
+import SlideMenu from "../components/SideMenu.astro";
 
 const allPublishedBlogs = await getCollection("blogs", ({data}) => {
     return data.isDraft !== true
@@ -13,9 +14,9 @@ allPublishedBlogs.sort((a,b) => {
     return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
 });
 
-const publishedCategories = []
+const publishedCategories = [];
 for(const apb of allPublishedBlogs) {
-    publishedCategories.push(apb.data.category)
+    publishedCategories.push(apb.data.category);
 }
 
 ---
@@ -25,27 +26,36 @@ for(const apb of allPublishedBlogs) {
             <BrandImg slot="title-image" src="/wuul0.png", alt="White fluffy sheep holding a Raspberry Pi with a wise look on its face."/>
     </PageTitleBlock>
     <!-- grid column block let the filters be in the last section -->
-    <section class="grid grid-cols-6">
+    <section class="grid grid-cols-6 mt-2">
         <!-- have the blog posts in chronological order -->
-        <section class="col-span-5 grid grid-cols-3 gap-4">
+        <!-- restrict the size of the card. I want to get multiple cards in the same row -->
+        <section class="col-span-6 sm:col-span-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+            <!-- think ultimately we need another container item that is here and then we build the card things inside of that. -->
             {
                 allPublishedBlogs.map((blogs) => ( 
-                    <Card 
-                      title={blogs.data.title}
-                      slug={blogs.slug}
-                      tldr={blogs.data.tldr}
-                    />
+                    // this is a place holder for the cardContainer element
+                    <div>
+                        <Card 
+                          title={blogs.data.title}
+                          slug={blogs.slug}
+                          tldr={blogs.data.tldr}
+                        />
+                    </div>
                 ))
             }
         </section>
-        <section class="col-span-1">
-            <li class="flex flex-col" >
+        <section class="hidden sm:col-span-1 sm:col-start-6 sm:flex flex-col items-center">
+            <h1>Categories</h1>
+            <ul>
                 {
-                    publishedCategories.map(categories => (
-                        <ul>{categories}</ul>
+                    publishedCategories.map((c) => (
+                        <li class="mt-1">
+                            {c}
+                        </li>
+
                     ))
                 }
-            </li>
+            </ul>
         </section>
     </section>
     <!--  Blogs component that does all the collection fetching -->
