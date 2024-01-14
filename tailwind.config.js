@@ -11,13 +11,15 @@ export default {
       },
       colors: {
         "wuul-green": "#63996A",
+        "wuul-accent": "#552583"
       },
       width: {
         "wuul-1/2": "50%"
       },
       fontFamily: {
-        "main": ["Montserrat", "sans-serif"],
-        "sub": ["Merriweather", "sans"]
+        // swap these out for different chat gpt combo font-families
+        "main": ["Montserrat"],
+        "sub": ["Merriweather"]
       }
     },
   },
