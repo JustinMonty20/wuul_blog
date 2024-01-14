@@ -8,6 +8,7 @@ const devBlogCollection = defineCollection({
         title: z.string(),
         date: z.string(),
         tags: z.array(z.string()),
+        description: z.string().max(160),
         isDraft: z.boolean(),
         tldr: z.string(),
         seoKeywords: z.array(z.string()),

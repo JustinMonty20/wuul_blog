@@ -3,8 +3,9 @@ title: Test Blog
 date: 1/11/24
 category: Rollout
 tags: 
-  - Testing
+  - nand2Tetris
 isDraft: false
+description: some random description testing 0
 tldr: just some test
 seoKeywords:
  - one
