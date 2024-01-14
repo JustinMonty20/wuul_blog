@@ -1,0 +1,16 @@
+---
+interface Props {
+	slug:string
+}
+const { slug } = Astro.props;
+---
+<a href={`/blogs/${slug}`}>
+<div class="container mx-auto border-solid border-2 border-black h-64 md:h-30 md:ml-2">
+		<div>
+			<div class="text-xl lg:text-2xl font-main text-wuul-accent flex justify-center mt-1">
+				<slot name="blog-card-header"/>
+			</div>
+			<slot name="blog-card-metadata"/>
+		</div>
+	</div>
+</a>

@@ -1,0 +1,24 @@
+---
+interface Props {
+    articleDescription: string,
+    tags: string[]
+}
+
+const {articleDescription, tags} = Astro.props;
+---
+<div class="text-base font-main text-wuul-accent">
+    <div>
+        <p>{articleDescription}</p>
+    </div>
+    <div>
+        <ul>
+            {
+                tags.map((t) => (
+                    <li>
+                        {t}
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+</div>
