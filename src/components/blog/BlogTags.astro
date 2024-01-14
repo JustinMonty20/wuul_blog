@@ -1,0 +1,30 @@
+---
+interface Props {
+    tags: Set<string>    
+}
+
+const { tags } = Astro.props;
+---
+
+<Fragment>
+    <p class="text-xl lg:text-2xl">Tags</p>
+    <ul>
+        {
+            Array.from(tags).map((t) => (
+
+                <li class="mt-1 hover-underline border-solid border-2 border-wuul-accent rounded-lg p-2 text-wuul-bg bg-wuul-accent">
+                    {t}
+                </li>
+            ))
+        }
+    </ul>
+</Fragment>
+
+<style>
+    :hover.hover-underline {
+        text-decoration: none;
+        background-color: #FDFEF8;
+        color: #552583;
+        border-color: #552583
+    }
+</style>
