@@ -31,7 +31,7 @@ for(const apb of allPublishedBlogs) {
             <BrandImg slot="title-image" src="/wuul0.png", alt="White fluffy sheep holding a Raspberry Pi with a wise look on its face."/>
     </PageTitleBlock>
     <section class="grid grid-cols-6 mt-2">
-        <section class="col-span-6 md:col-span-5 grid grid-cols-1 gap-2">
+        <section class="col-span-6 md:col-span-5 grid grid-cols-1 md:grid-cols-2 gap-2">
             {
                 allPublishedBlogs.map((b) => ( 
                     // I need the Date somewhere. 
@@ -43,8 +43,7 @@ for(const apb of allPublishedBlogs) {
             }
         </section>
         <section class="hidden sm:col-span-1 sm:col-start-6 sm:flex flex-col items-center text-base font-main text-wuul-accent">
-            <BlogTags tags={uniqueTags} />
+            <BlogTags tags={uniqueTags} shouldLoadAllTags={true} shouldLoadHeader={true} />
         </section>
     </section>
 </BaseLayout>
-
