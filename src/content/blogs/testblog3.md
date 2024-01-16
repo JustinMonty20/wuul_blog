@@ -6,7 +6,7 @@ tags:
   - TypeScript
 isDraft: false
 tldr: just some test 3
-description: some random description testing 3
+description: some random description testing 3. Just want to see how far I can get with this
 seoKeywords: 
  - three
 slug: test-3
