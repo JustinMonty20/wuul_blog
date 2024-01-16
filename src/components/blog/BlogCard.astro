@@ -5,9 +5,9 @@ interface Props {
 const { slug } = Astro.props;
 ---
 <a href={`/blogs/${slug}`}>
-<div class="container mx-auto border-solid border-2 border-black h-64 md:h-30 md:ml-2">
+<div class="container mx-auto border-solid border-b-2 border-wuul-main h-64 md:h-30 md:ml-a hover:animate-pulse hover:animate-infinite hover:animate-ease-out">
 		<div>
-			<div class="text-xl lg:text-2xl font-main text-wuul-accent flex justify-center mt-1">
+			<div class="text-xl lg:text-2xl font-main flex mt-1 p-2">
 				<slot name="blog-card-header"/>
 			</div>
 			<slot name="blog-card-metadata"/>

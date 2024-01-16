@@ -1,21 +1,51 @@
 ---
 interface Props {
-    tags: Set<string>    
+    tags: Set<string> | string[],
+    shouldLoadHeader: boolean,
+    shouldLoadAllTags: boolean,
 }
 
-const { tags } = Astro.props;
+const { shouldLoadHeader, shouldLoadAllTags, tags  } = Astro.props;
+const tagsArray = Array.isArray(tags) ? tags : Array.from(tags);
 ---
 
 <Fragment>
-    <p class="text-xl lg:text-2xl">Tags</p>
+    {shouldLoadHeader && <p class="text-xl lg:text-2xl">Tags</p>}
     <ul>
-        {
-            Array.from(tags).map((t) => (
-
-                <li class="mt-1 hover-underline border-solid border-2 border-wuul-accent rounded-lg p-2 text-wuul-bg bg-wuul-accent">
+        {shouldLoadAllTags ? 
+        <Fragment>
+            {
+                tagsArray.map((t) => (
+                    <li
+                    class="mt-1 hover-underline border-solid border-2 border-wuul-accent rounded-lg p-2 text-wuul-bg bg-wuul-accent min-w-0 min-h-0"
+                >
                     {t}
-                </li>
-            ))
+                </li>    
+                ))
+            }
+        </Fragment>
+        :
+        <Fragment>
+            {
+                tagsArray.slice(0, 3).map((t) => (
+                    <li
+                        class="mt-1 hover-underline border-solid border-2 border-wuul-accent rounded-lg p-2 text-wuul-bg bg-wuul-accent min-w-0 min-h-0"
+                    >
+                        {t}
+                    </li>
+                ))
+            }
+            {
+                 tagsArray.length > 3 && (
+                    <li
+                        class="mt-1 hover-underline border-solid border-2 border-wuul-accent rounded-lg p-2 text-wuul-bg bg-wuul-accent min-w-0 min-h-0"
+                    >
+                        {`${tagsArray.length - 3} more ...`}
+                    </li>
+                )
+
+            }
+        </Fragment>
         }
     </ul>
 </Fragment>
@@ -24,7 +54,7 @@ const { tags } = Astro.props;
     :hover.hover-underline {
         text-decoration: none;
         background-color: #FDFEF8;
-        color: #552583;
-        border-color: #552583
+        color: #485F40;
+        border-color: #485F40;
     }
 </style>

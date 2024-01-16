@@ -1,4 +1,5 @@
 ---
+import BlogTags from './BlogTags.astro';
 interface Props {
     articleDescription: string,
     tags: string[]
@@ -6,19 +7,12 @@ interface Props {
 
 const {articleDescription, tags} = Astro.props;
 ---
-<div class="text-base font-main text-wuul-accent">
+<div class="flex font-main text-wuul-main justify-between px-2">
+    <!-- this should be the TL;DR I think -->
     <div>
-        <p>{articleDescription}</p>
+        <p class="text-base lg:text-large">{articleDescription}</p>
     </div>
-    <div>
-        <ul>
-            {
-                tags.map((t) => (
-                    <li>
-                        {t}
-                    </li>
-                ))
-            }
-        </ul>
+    <div class="flex items-center">
+        <BlogTags shouldLoadAllTags={false} tags={tags} shouldLoadHeader={false}/>
     </div>
 </div>
