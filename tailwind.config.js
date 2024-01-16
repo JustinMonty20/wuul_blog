@@ -6,12 +6,14 @@ export default {
       textColor: {
         "wuul-main": "#333333",
         "wuul-bg": "#F9F6EE",
-        "wuul-accent": "#552583",
-        "wuul-gold": "#FDB927"
+        "wuul-black": "#000000",
+        "wuul-accent": "#485F40",
+        "wuul-purp": "#552583",
+        "wuul-nav": "#6DB17C"
       },
       colors: {
         "wuul-green": "#63996A",
-        "wuul-accent": "#552583"
+        "wuul-accent": "#485F40",
       },
       width: {
         "wuul-1/2": "50%"
