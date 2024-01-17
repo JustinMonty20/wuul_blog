@@ -19,9 +19,8 @@ export default {
         "wuul-1/2": "50%"
       },
       fontFamily: {
-        // swap these out for different chat gpt combo font-families
-        "main": ["Montserrat"],
-        "sub": ["Merriweather"]
+        "main": ["Poppins", "sans-serif"],
+        "sub": ["Nunito Variable", "sans-serif"]
       }
     },
   },
