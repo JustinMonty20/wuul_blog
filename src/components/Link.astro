@@ -4,18 +4,13 @@ interface Props {
     txt: string;
 }
 const {href, txt} = Astro.props;
-const {pathname} = Astro.url
-const isActive = href === pathname || href === pathname.slice(1);
 ---
 
-<a class=`link-text text-base lg:text-lg text-wuul-purp font-medium hover-underline ${isActive ? "active" : ""}` href={href}>
+<a class="link-text text-sm md:text-base text-wuul-purp font-medium hover-underline" href={href}>
     {txt}
 </a>
 
 <style>
-    .link-text {
-        font-family: 'Montserrat';
-    }
     :hover.hover-underline {
         text-decoration: none;
         color: #8D6DAC;
