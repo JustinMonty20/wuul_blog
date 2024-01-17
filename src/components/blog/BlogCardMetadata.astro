@@ -7,12 +7,12 @@ interface Props {
 
 const {articleDescription, tags} = Astro.props;
 ---
-<div class="flex font-main text-wuul-main justify-between px-2">
+<div class="flex text-wuul-main justify-between px-2">
     <!-- this should be the TL;DR I think -->
     <div>
-        <p class="text-base lg:text-large">{articleDescription}</p>
+        <p class="text-base font-main lg:text-large">{articleDescription}</p>
     </div>
-    <div class="flex items-center">
+    <div class="flex items-center mb-1">
         <BlogTags shouldLoadAllTags={false} tags={tags} shouldLoadHeader={false}/>
     </div>
 </div>
