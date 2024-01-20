@@ -1,5 +1,6 @@
 ---
 import Nav from '../components/Nav.astro';
+import {routes} from "../routes/routes.metadata";
 ---
 
 <!doctype html>
@@ -13,7 +14,7 @@ import Nav from '../components/Nav.astro';
 		<title>wuul.dev</title>
 	</head>
 	<body>
-		<Nav/>
+		<Nav routes={routes}/>
 		<slot />
 	</body>
 </html>
