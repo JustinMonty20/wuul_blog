@@ -16,11 +16,9 @@ const tagsArray = Array.isArray(tags) ? tags : Array.from(tags);
         <Fragment>
             {
                 tagsArray.map((t) => (
-                    <li
-                    class="mt-1 hover-underline border-solid border-2 border-wuul-accent rounded-lg p-2 text-wuul-bg bg-wuul-accent min-w-0 min-h-0 font-sub"
-                >
-                    {t}
-                </li>    
+                    <li class="mt-1 hover-underline border-solid border-2 border-wuul-accent rounded-lg p-2 text-wuul-bg bg-wuul-accent min-w-0 min-h-0 font-sub">
+                        <a class="inline-flex" href={`/blogs/category?filter=${t}`}>{t}</a>
+                    </li>    
                 ))
             }
         </Fragment>
@@ -28,18 +26,14 @@ const tagsArray = Array.isArray(tags) ? tags : Array.from(tags);
         <Fragment>
             {
                 tagsArray.slice(0, 3).map((t) => (
-                    <li
-                        class="mt-1 hover-underline border-solid border-2 border-wuul-accent rounded-lg p-2 text-wuul-bg bg-wuul-accent min-w-0 min-h-0 font-sub"
-                    >
-                        {t}
+                    <li class="mt-1 hover-underline border-solid border-2 border-wuul-accent rounded-lg p-2 text-wuul-bg bg-wuul-accent min-w-0 min-h-0 font-sub">
+                        <a class="inline-flex" href={`/blogs/category?filter=${t}`}>{t}</a>
                     </li>
                 ))
             }
             {
                  tagsArray.length > 3 && (
-                    <li
-                        class="mt-1 hover-underline border-solid border-2 border-wuul-accent rounded-lg p-2 text-wuul-bg bg-wuul-accent min-w-0 min-h-0 font-sub"
-                    >
+                    <li class="mt-1 hover-underline border-solid border-2 border-wuul-accent rounded-lg p-2 text-wuul-bg bg-wuul-accent min-w-0 min-h-0 font-sub">
                         {`${tagsArray.length - 3} more ...`}
                     </li>
                 )

@@ -4,17 +4,16 @@ interface Props {
 }
 const { slug } = Astro.props;
 ---
-<a href={`/blogs/${slug}`}>
 <div class="container container-hover mx-auto border-solid border-b-2 border-wuul-main h-64 md:h-30 md:ml-4">
-		<div>
+	<div>
+		<a href={`/blogs/${slug}`}>
 			<div class="text-xl lg:text-2xl font-main flex mt-1 p-2">
 				<slot name="blog-card-header"/>
 			</div>
-		</div>
+		</a>
+	</div>
 		<slot name="blog-card-metadata"/>
 	</div>
-</a>
-
 <style>
 	:hover.container-hover {
 		border-bottom: solid .12rem #485F40
