@@ -9,9 +9,8 @@ export async function getStaticPaths () {
     })))
 }
 const { entry } = Astro.props;
-const {Content} = await entry.render();
+const { Content } = await entry.render();
 ---
-
 <BlogPostLayout frontmatter={entry.data}>
     <Content />
 </BlogPostLayout>
