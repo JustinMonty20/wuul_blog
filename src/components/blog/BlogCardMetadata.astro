@@ -10,7 +10,7 @@ const {articleDescription, tags} = Astro.props;
 <div class="flex text-wuul-main justify-between px-2">
     <!-- this should be the TL;DR I think -->
     <div>
-        <p class="text-base font-main lg:text-large">{articleDescription}</p>
+        <p class="text-base font-main lg:text-large mr-2">{articleDescription}</p>
     </div>
     <div class="flex items-center mb-1">
         <BlogTags shouldLoadAllTags={false} tags={tags} shouldLoadHeader={false}/>
