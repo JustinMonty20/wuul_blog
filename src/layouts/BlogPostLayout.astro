@@ -2,8 +2,9 @@
 import PageTitleBlock from "../components/PageTitleBlock.astro"
 import BrandImg from "../components/branding/BrandImg.astro"
 import Nav from "../components/Nav.astro";
+
 import { subRoutes } from "../routes/routes.metadata";
-const { frontmatter } = Astro.props;
+const { frontmatter, headings } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -21,9 +22,19 @@ const { frontmatter } = Astro.props;
             <p class="text-base lg:text-4xl sm:text-xl mb-1 font-main text-wuul-bg sm:text-md">{frontmatter.title}</p>
             <BrandImg slot="title-image" src="/wuul0.png", alt="White fluffy sheep holding a Raspberry Pi with a wise look on its face."/>
         </PageTitleBlock>
+		<div>
+			<div class="grid grid-col-4">
+			</div>
+		</div>
+		<!-- 4 columns? -->
+		<!-- 1 column on the left for space. -->
+		<!-- 2 columns flex stacked to hold the slot   -->
+		<!-- 1 column flex-col that will eventually hold the table of contens -->
+
         <!-- lets gussy this up now -->
-		<p>TLDR;</p>
-        <p>{frontmatter.tldr}</p>
+		<!-- <p>TLDR;</p>
+        <p>{frontmatter.tldr}</p> -->
+		<!-- these are the actual props from the content  -->
 		<slot />
 	</body>
 </html>
