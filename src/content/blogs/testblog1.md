@@ -11,5 +11,10 @@ seoKeywords:
  - one
 slug: /test-one
 ----
-
 ## Lots of Great Content 1
+
+```ts
+let a = 1
+```
+
+lets see what this looks like in the prose component.
