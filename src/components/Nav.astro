@@ -1,12 +1,16 @@
 ---
 import type { NavMetadata } from "../types";
+import { ViewTransitions } from "astro:transitions";
 import Link from "./Link.astro";
 interface Props {
     routes: NavMetadata[]
 }
 const { routes } = Astro.props;
 ---
-
-<div class="flex justify-around h-[4vh] items-center font-main">
-    {routes.map((r) => <Link href={r.to} txt={r.txt}/>)}
-</div>
+<Fragment>
+    <!-- this needed to be in a common component we'll keep it hear and maybe wrap this in a Fragment. -->
+    <ViewTransitions/>
+    <div class="flex justify-around h-[4vh] items-center font-main">
+        {routes.map((r) => <Link href={r.to} txt={r.txt}/>)}
+    </div>
+</Fragment>
