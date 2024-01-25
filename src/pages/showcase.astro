@@ -1,8 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
+import PageTitleBlock from "../components/PageTitleBlock.astro";
+import BrandImg from "../components/branding/BrandImg.astro";
 ---
 <BaseLayout>
-    <h1>
-        Showcase
-    </h1>
+    <PageTitleBlock>
+        <p class="text-base lg:text-4xl sm:text-xl mb-1 font-main text-wuul-bg sm:text-md">Coming Soon ...</p>
+        <BrandImg slot="title-image" src="/wuul0.png", alt="White fluffy sheep holding a Raspberry Pi with a wise look on its face."/>
+    </PageTitleBlock>
 </BaseLayout>

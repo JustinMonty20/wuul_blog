@@ -3,13 +3,13 @@
 const { heading } = Astro.props;
 ---
 
-<li class={`pl-${heading.depth > 1 ? heading.depth*2 : '0' } !important`}>
-  <a href={'#' + heading.slug}>
+<li>
+  <a class="hover:text-wuul-purp" href={'#' + heading.slug}>
     {heading.text}
   </a>
   {
     heading.subheadings.length > 0 && (
-      <ul>
+      <ul class={`pl-${heading.depth > 1 ? heading.depth + 1 : '0' }`}>
         {
             heading.subheadings.map((subheading: any) => (
           <Astro.self heading={subheading} />
@@ -19,3 +19,10 @@ const { heading } = Astro.props;
     )
   }
 </li>
+
+<!-- need to rever the padding so I can get the sub nested headings that I want. -->
+<style>
+  ul {
+    padding: revert;
+  }
+</style>
