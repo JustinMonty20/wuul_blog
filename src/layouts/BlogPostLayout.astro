@@ -31,9 +31,9 @@ const formatedDate = moment(frontmatter.date).format("MMMM D, YYYY");
             <BrandImg slot="title-image" src="/wuul0.png", alt="White fluffy sheep holding a Raspberry Pi with a wise look on its face."/>
         </PageTitleBlock>
 		<!-- this should all go into a component in my /blog directory probably at the end of the day.. -->
-		<section class="grid grid-cols-1 mx-2 md:grid-cols-4">
+		<section class="grid grid-cols-1 mx-2 md:grid-cols-5">
 			<div class="hidden md:block col-span-1"></div>
-			<div class="col-span-1 md:col-span-2">
+			<div class="col-span-1 md:col-span-3">
 				<div class="flex flex-col">
 					<div class="mb-10 font-main font-medium text-wuul-main">
 						<!-- Date of the article when I published it-->
@@ -68,5 +68,6 @@ const formatedDate = moment(frontmatter.date).format("MMMM D, YYYY");
 		background:#FDFEF8;
 		margin: 0;
 		padding: 0;
+		scroll-behavior: smooth;
 	}
 </style>

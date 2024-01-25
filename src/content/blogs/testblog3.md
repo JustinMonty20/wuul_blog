@@ -13,6 +13,11 @@ slug: test-3
 ---
 
 ## Lots of Great Content 3
+was just thinking about all this great content. Can't belive I built this blog with Astro!
 ### More great content
-
+doing this shit was kind hard. I really didn't think it would be this hard and the website still looks like shit compared to some of the others that I've seen. 
 ## Some More Decent Content
+```js
+let a = 1;
+const b = a * 2
+```
