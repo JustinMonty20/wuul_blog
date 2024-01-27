@@ -23,12 +23,12 @@ jobs:
         uses: actions/checkout@v4
       - name: Build Blog
         run: pnpm install && pnpm run build
-      # - name: Publish to Cloudflare Pages
-      #   uses: "cloudflare/pages-action@1"
-      #   with:
-      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      #     projectName: "wuul-blog"
-      #     directory: "dist"
-      #     gitHubToken: ${{secrets.GITHUB_TOKEN}}
+      - name: Publish to Cloudflare Pages
+        uses: "cloudflare/pages-action@1"
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: "wuul-blog"
+          directory: "dist"
+          gitHubToken: ${{secrets.GITHUB_TOKEN}}
       
