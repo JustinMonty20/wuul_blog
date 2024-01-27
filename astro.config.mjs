@@ -6,5 +6,5 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
     output: "hybrid",
     integrations: [tailwind()],
-    adapter: cloudflare(),
+    adapter: cloudflare({mode: "directory"}),
 });
