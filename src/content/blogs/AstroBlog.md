@@ -1,15 +1,17 @@
 ---
 title: Building This Site With Astro!
-date: 1/14/24
+date: 1/27/24
 category: Rollout3
 tags: 
   - TypeScript
+  - Astro
+  - Web Dev
 isDraft: false
-tldr: just some test 3
-description: some random description testing 3. Just want to see how far I can get with this
+tldr: Finally built a dev blog! Comitting to something other than React was probably the hardest part. Glad I chose Astro and stuck with it.
+description: Astro goated ??
 seoKeywords: 
  - three
-slug: test-3
+slug: building-with-astro
 ---
 
 ## Lots of Great Content 3
