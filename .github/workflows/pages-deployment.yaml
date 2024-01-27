@@ -13,7 +13,7 @@ jobs:
       - name: Setup Node w/ pnpm
         uses: actions/setup-node@v3
         with:
-          node-verson: "21"
+          node-version: "20"
       - run: npm i -g pnpm
       - name: Checkout
         uses: actions/checkout@v4
