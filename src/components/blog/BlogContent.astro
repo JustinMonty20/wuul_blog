@@ -1,0 +1,36 @@
+---
+import Prose from "./Prose.astro";
+interface Props {
+    formatedDate: string;
+    tldr: string;
+}
+const { formatedDate, tldr } = Astro.props;
+---
+
+<Fragment>
+    <div class="flex flex-col">
+        <div class="mb-10 font-main font-medium text-wuul-main">
+            <!-- Date of the article when I published it-->
+            <section
+                class="border-solid border-b-2 border-wuul-accent lg:w-3/4"
+            >
+                <div>
+                    <p class="my-5 mb-10 text-medium">
+                        {formatedDate}
+                    </p>
+                    <p class="text-2xl lg:text-3xl mb-5 text-wuul-purp">
+                        TL;DR
+                    </p>
+                    <p>
+                        {tldr}
+                    </p>
+                </div>
+            </section>
+        </div>
+        <article>
+            <Prose>
+                <slot />
+            </Prose>
+        </article>
+    </div>
+</Fragment>
