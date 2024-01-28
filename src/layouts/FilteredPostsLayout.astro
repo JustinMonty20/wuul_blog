@@ -1,6 +1,6 @@
 ---
 import Nav from '../components/Nav.astro';
-import {deepNestedRoutes} from "../routes/routes.metadata";
+import { blogRoutes } from "../routes/routes.metadata";
 ---
 
 <!doctype html>
@@ -17,8 +17,7 @@ import {deepNestedRoutes} from "../routes/routes.metadata";
 		<title>wuul.dev</title>
 	</head>
 	<body>
-		<!-- fix how I have the routing done currently. -->
-		<Nav routes={deepNestedRoutes}/>
+		<Nav routes={blogRoutes.alterBaseRouteDepth("../..")}/>
 		<slot />
 	</body>
 </html>
