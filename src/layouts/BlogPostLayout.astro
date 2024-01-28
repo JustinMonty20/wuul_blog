@@ -5,7 +5,7 @@ import BrandImg from "../components/branding/BrandImg.astro"
 import Nav from "../components/Nav.astro";
 import Prose from "../components/blog/Prose.astro";
 
-import { subRoutes } from "../routes/routes.metadata";
+import { deepNestedRoutes } from "../routes/routes.metadata";
 import TableOfContents from "../components/blog/toc/TableOfContents.astro";
 const { frontmatter, headings } = Astro.props;
 const formatedDate = moment(frontmatter.date).format("MMMM D, YYYY");
@@ -24,7 +24,7 @@ const formatedDate = moment(frontmatter.date).format("MMMM D, YYYY");
 		<title>wuul.dev</title>
 	</head>
 	<body>
-		<Nav routes={subRoutes}/>
+		<Nav routes={deepNestedRoutes}/>
         <PageTitleBlock>
             <p class="text-base lg:text-4xl sm:text-xl mb-1 font-main text-wuul-bg sm:text-md">{frontmatter.title}</p>
             <BrandImg slot="title-image" src="/wuul0.png", alt="White fluffy sheep holding a Raspberry Pi with a wise look on its face."/>
