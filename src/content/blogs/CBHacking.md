@@ -4,7 +4,7 @@ date: 1/28/24
 category: 
 tags: 
   - Linux
-isDraft: false
+isDraft: true
 description: Long live Mrchomebox.tech and chromebook_kid !
 tldr: T
 seoKeywords:
@@ -14,4 +14,5 @@ slug: chromebook-hacking
 ## Lots of Great Content
 
 ```bash
+ls -a
 ```

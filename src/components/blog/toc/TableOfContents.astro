@@ -6,7 +6,7 @@ import TableOfContentsHeading from "./TableOfContentsHeading.astro";
 const toc = buildToc(headings);
 ---
 <!-- Jugged from this guys recipe https://kld.dev/toc-animation/#lets-start-with-the-markup-->
-<nav class="toc">
+<nav class="toc sticky top-0">
   <ul class="text-wuul-main text-medium">
     {toc.map((heading:any) => <TableOfContentsHeading heading={heading} />)}
   </ul>
