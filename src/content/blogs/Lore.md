@@ -75,6 +75,36 @@ It dawned on me that I was doing another bootcamp except this time I was actuall
 
 ### Sept 2021 - Dec 2021
 
+Our training cohort starts and we got a really cool trainer, a lot of this was review for me since I had taken and done something almost identical at the beginning of 2020 in my Trilogy Bootcamp. For salary transparency we were getting paid 20$ an hour.
+
+Here is how the setup of the training went:
++ 9 - 1: We learned a new topic of the day and we started from ground 0 in JavaScript
++ 1 - 2 lunch break 
++ 2 - ~3:30 we had a presentation about a technical topic that we got to choose and make a presentation on
++ 3:30 - 5. We got to work on whatever we wanted; could have been review of the morning session or time to work on your presentation.
+
+Every so often we took a quiz or did a technical interview with our trainer to prepare us to talk about tech and land interviews. 
+
+I was buzzing during this time. I was getting some of the highest marks in the training sessions on the technical interviews and the presentations we very technical in nature and I was nailing the delivery. 
+We had three projects with varying degrees of difficulty. The last project brought together several cohorts of different tech stacks altogether on project. My team was tasked with a Google Maps integration to plot  one - two devliery routes of a thirty mile radius in the most efficient manner. 
+We had one week to ship and we finished in two days. So we moved on to help other teams and I worked with an Azure Service Bus for the first time which was cool. We ended up being the only team to fully finish their piece of the project which was cool to see and I made some friends. Overall a pleasant experience. 
+
+Towards the end of that final project we were interviewing with different clients. I only ever took one interview with a Big 4 accounting firm and interviewed with a nice Solution Architect. The interview itself wasn't too technical in nature a couple of interview questions about JavaScript, TypeScript, and Promises but most of it was focused around behavoral related items. Talking about what I'm interested in and what I would do in certain situations. 
+
+I landed what I thought was a two year contract with the organization post Thanksgiving of that year and was going to start Dec 6th. I was over the moon. Finally was going to get my first job as a software developer and was going to prove to myself and everyone else that I could do the work. 
+
 ### Dec 2021 - Feb 2023
 
+Boy it wasn't what I thought it was going to be. I had earned a reputation as a high performer and I was placed on a team with really no support. My first task was to get a legacy React and Angular component library into something called Bit.dev (Bit.cloud now) and I was working in tandem with a really talented group of developers. I was feeling completly isolated no one was available for me to reach out too. Feeling overwhelemed it started to bleed into my home life and I was honestly depressed, being a developer wasn't all it was cracked up to be. I didn't like my manager. He was a micomanager and was constantly asking for updated everyday calling on a whim and changing requirements. I was being spread really thin and I felt like I was getting nowhere. I ended up stopping the project in Feb of 2021 because the Angular support for the Bit.dev was having issues building the nested natrue and within 6 months I was giving a presentation to the CTO... What in the world. 
+
+After that I was moved to a different internal product with a small team and started working with someone who is still a close friend and coworker till this day. Since Feb 2022 I have been working consistently on the same project. Building all of the backends and handling the DBA role as well as helping another close friend and coworker with debugging DevOps and deployment related issues. 
+
 ### Feb 2023 - Feb 2024
+
+I couldn't say what the company I was working for during those dates. If I ever get around to linking my LinkedIn you'll probably see who it was but in the meantime I was moved from a contractor to a FT employee in Feb of 2023 after a year with a starting salary of 88K a year. I had finally got my first FT dev job was made an Assoicate Full Stack Developer. I don't really do FullStack work anymore even tho that is my title. I've kinda taken the SA / Lead Role out of necessity to keep the project humming along but I'm getting really tired of working on the same thing. I've kinda built this project from the ground up with only 4 months of true help with a really great and competent lead from like Feb 2023 - July 2023 before they cut the team down to bare bones and just had me and 2 other people running it doing absoultely everything. 
+
+Thats going to bring us to present day. I've grown so much over this time and I'm skipping over lots of extra details about my life as I'm finishing this at 12 am. 
+
+This was just a massive dump of my journey so far mostly for me so I can look back on how far I've come. I plan to keep adding to the Lore category every February to update and create a time capsule of sorts about what I have been working on. 
+
+Thanks, Wuul.
