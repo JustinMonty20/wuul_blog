@@ -20,5 +20,5 @@ const devBlogCollection = defineCollection({
 })
 
 export const collections = {
-    'blogs': devBlogCollection
+    'blog': devBlogCollection
 }
