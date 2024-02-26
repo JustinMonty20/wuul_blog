@@ -88,7 +88,7 @@ Starting from scratch now, here is what I needed to do in order
 2. Changing the CCD state from 'closed' to 'open' to allow for modifications
 3. Turn off the WP (Write Protect) so I can run the MrChromebox firmware utility script.
 
-I won't be going back over the Developer mode bit since we already talked and I linked to that above, so we'll start at number 2. All of these steps I followed from this [link](https://wiki.mrchromenox.tech/Firmware_Write_Protect), just documenting them quickly here as well.
+I won't be going back over the Developer mode bit since we already talked and I linked to that above, so we'll start at number 2. All of these steps I followed from this [link](https://wiki.mrchromebox.tech/Firmware_Write_Protect), just documenting them quickly here as well.
 
 #### Open CCD state 
 
