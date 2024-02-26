@@ -52,7 +52,7 @@ After booting into developer mode there are two ways to get a root-capable shell
 
 At this point you can do whatever it is you came here to do. For me, I was going to flash the firmware which would remove ChromeOS and make the machine like any regular run-of-the-mill laptop. 
 
-How does one do that you ask? Beats me lol. However, Mrchromebox swoops in again with a [Firmware utility script](https://mrchromebox.tech/#fwscript). This script simplifies the common functions most users need when interfacing with the firmware on a ChromeOS device. To run the script here was the command from the docs and for my machine, I needed to run the script from #1 above since there they parched begin able to run it from the crosh shell which is option #2 above. It was late at night and I was ready to keep this moving so I followed the command in the ```chronos``` shell
+How does one do that you ask? Beats me lol. However, Mrchromebox swoops in again with a [Firmware utility script](https://mrchromebox.tech/#fwscript). This script simplifies the common functions most users need when interfacing with the firmware on a ChromeOS device. To run the script here was the command from the docs and for my machine, I needed to run the script from #1 above since there they parched begin able to run it from the crosh shell which is option #2 above. It was late at night and I was ready to keep this moving so I followed the command in the ```chronos``` shell.
 
 ```bash
 cd; curl -LO mrchromebox.tech/firmware-util.sh && sudo bash firmware-util.sh
