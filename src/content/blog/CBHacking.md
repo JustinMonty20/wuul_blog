@@ -68,7 +68,7 @@ EXCEPT when I tried to select the second option I was getting error messages tel
 
 Naturally I started googling and then found I could disbale the WP *most likely* in one of two ways. Either crack open this bad boy and mess with the battery or if my model supported it I could do something called CCD (Closed Case Debugging). 
 
-It was already running later and I did not feel like splitting this mfer open so I looked more into CCD. Using yet another Mrchomebox link I found my model here under [Supported Devices](https://mrchromebox.tech/#devices):SNAPPY, so an HP Chromebook. The WP or Write Protect method is confirmed on my batter.Clicking on the CR50 link on that page brought me to Mrchromebox wiki that dives into [how firmware write protect works](https://wiki.mrchromebox.tech/Firmware_Write_Protect#Hardware_Write_Protection). 
+It was already running later and I did not feel like splitting this mfer open so I looked more into CCD. Using yet another Mrchomebox link I found my model here under [Supported Devices](https://mrchromebox.tech/#devices): *SNAPPY*, so an HP Chromebook. The WP or Write Protect method is confirmed on my batter.Clicking on the CR50 link on that page brought me to Mrchromebox wiki that dives into [how firmware write protect works](https://wiki.mrchromebox.tech/Firmware_Write_Protect#Hardware_Write_Protection). 
 
 Coming to the bottom of this guide I saw that I needed a special cable called a Suzy Q cable. Which when I googled it, looked exactly like a regular USB-A-> USB connector. I figured I'd give it a go with a regular cable that I used to charge my keyboard; no luck and I wasted about 20 mins trying that twice before I the ole dusty Google trail and found a Reddit post saying that even though it looked exactly like a run of the mill USB A -> USB C connector, thepins underneath the USB C port were different and on top ofthat you couldn't buy them online from the usualy Suzy Q plug since they stopped making them for whatever reason. Bummer. I shut off my office machine and headed to my kitchen for some buttered Biscoff toast as I was mulling over my options:
 
@@ -77,5 +77,60 @@ Coming to the bottom of this guide I saw that I needed a special cable called a 
 + Let it collect dust in my office forever. 
 
 ### Day 2
+
+In comes the next hero of our story which is: [chromebook_kid](https://ebay.com/usr/chromebook_kid). Remember when I said we needed a special cable that seemed to be discontinued in order to disable the Write Protect on my Chromebook? If I didn't want to pop open the Chromebook. This person in California makes a USB-C connector that will take any USB-C head and make it the correct wiring we need in order to do the closed cased debugging. I ordered [GSC DebugBoard](https://ebay.com/itm/335130747039?var=544363912166) without a cable and blazingly fast it was packaged and shipped to me for a reasonable price. I think it was 15 USD after shipping. My debug board was arriving in about 2 weeks and I was buzzing to get my hands on it.
+
+### Day 14ish ? 
+
+Around two weeks later I get my debug board and after I finished up my workday I was read to get back onto MrChromebox and disabled the WP so I could run the firmware util script again. I can't recommend the chromebook_kid enough. If you stumbled upon the post trying to do the same thing check out the linksin the paragraph above and support him.
+
+Starting from scratch now, here is what I needed to do in order
+
+1. Enable Developer Mode (to get my admin shell)
+2. Changing the CCD state from 'closed' to 'open' to allow for modifications
+3. Turn off the WP (Write Protect) so I can run the MrChromebox firmware utility script.
+
+I won't be going back over the Developer mode bit since we already talked and I linked to that above, so we'll start at number 2. All of these steps I followed from this [link](https://wiki.mrchromenox.tech/Firmware_Write_Protect), just documenting them quickly here as well.
+
+#### Open CCD state 
+
++ open the admin shell called 'crosh' using CTRL - ALT - T
++ Check the CCD state. Should be closed
+```bash 
+sudo gsctool -a -I
+```
++ Set the CCD state to open:
+```bash
+sudo gsctool -a -o
+```
++ At this point just follow the prompt on screen to keep mashing the power button over the next couple of minutes you will keep doing that until the device reboots and then it will exit Developer Mode so you'll need to hop right back in.
+
+#### Disable WP 
+Bring out the Cable with our connector acquired from chromebook_kid. USB-C with the connector should be plugged into the left rear port, because that isusually the debug port. The USB-A end can be plugged into any open port. 
+
++ Verify the cable connection. Should rturn 3 items. ttyUSB0, ttyUSB1, and ttyUSB2. If not then double check where the USB-C connector is plugged in and make sure its not upside down.
+```bash
+ls /dev/ttyUSB*
+```
++ Get a root shell w/ ```sudo bash```
++ Disable the hardware write protect 
+```bash
+echo "wp false" > /dev/ttyUSB0
+
+echo "wp false atboot" > /dev/ttyUSB0
+```
++ Enable all CCD functionality
+```bash
+echo "ccd reset factory" > /dev/ttyUSB0
+```
++ Verify the changes
+```bash
+gsctool -a -I
+```
+CCD state should now be open, and the current value for all CCD flages should be set to Y/Always
+
+At this point we are done and let MrChromebox take us home with his Firmware Utility Script that we talked about above. Now the #2 option on that script won't be disabled and we can falsh the firmware to make out laptop just a regular machine so we can do whatever we want with it. For me it was to installArch so I could take the cool cli picture to send to my friends and then visit the FOSS site to buy a 'I use arch btw shirt' 
+
+If you made it this far. Thanks for reading the post. See ya.
 
 
