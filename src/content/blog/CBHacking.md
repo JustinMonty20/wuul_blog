@@ -41,7 +41,7 @@ dd bs=4M if=/home/root/Download/someiso.iso of=/dev/dist/sda conv=fsync oflag=di
 + **oflag** -> 'direct' because we don't want to add anything extra to output data
 + **status** -> Shows the status of the data transfer. Without this, you won't see anything.
 
-After I burned the ISO file. I went into research mode figuring out how I could wipe this Chromebook when I came across our first hero: [MrChromebox.tech](https://mrchromebox.tech/#fwscript). This stud knows all about rolling different OS' on Chromebooks and created a centralized location for all the resources you'll need to mess around with your Chromebook. 
+After I burned the ISO file. I went into research mode figuring out how I could wipe this Chromebook when I came across our first hero: [MrChromebox.tech](https://mrchromebox.tech/#home). This stud knows all about rolling different OS' on Chromebooks and created a centralized location for all the resources you'll need to mess around with your Chromebook. 
 
 From there I was able to figure out how to boot into [developer mode](https://mrchromebox.tech/#devmode). This is the first step needed since the regular boot mode will lock you out of the shell that we need. I'm not going to go into firmware too heavily but if you are interested there is a cool section [All About Firmware](https://mrchromebox.tech/#firmware) that talks about the firmware used to create ChromeOS. 
 
