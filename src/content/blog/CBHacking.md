@@ -76,7 +76,7 @@ Coming to the bottom of this guide I saw that I needed a special cable called a 
 
 ### Day 2
 
-In comes the next hero of our story which is: [chromebook_kid](https://ebay.com/usr/chromebook_kid). Remember when I said we needed a special cable that seemed to be discontinued in order to disable the Write Protect on my Chromebook? If I didn't want to pop open the Chromebook. This person in California makes a USB-C connector that will take any USB-C head and make it the correct wiring we need in order to do the closed-cased debugging. I ordered [GSC DebugBoard](https://ebay.com/itm/335130747039?var=544363912166) without a cable and blazingly fast it was packaged and shipped to me for a reasonable price. I think it was 15 USD after shipping. My debug board was arriving in about 2 weeks and I was buzzing to get my hands on it.
+In comes the next hero of our story which is: [chromebook_kid](https://ebay.com/usr/chromebook_kid). Remember when I said we needed a special cable that seemed to be discontinued in order to disable the Write Protect on my Chromebook? If I didn't want to pop open the Chromebook. This person in California makes a USB-C connector that will take any USB-C head and make it the correct wiring we need in order to do the closed-cased debugging. I ordered the [GSC DebugBoard](https://ebay.com/itm/335130747039?var=544363912166) without a cable and blazingly fast it was packaged and shipped to me for a reasonable price. I think it was 15 USD after shipping. My debug board was arriving in about 2 weeks and I was buzzing to get my hands on it.
 
 ### Day 14ish ? 
 
